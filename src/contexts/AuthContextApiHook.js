@@ -33,9 +33,13 @@ const LearnAuthProvider = ({ children }) => {
             });
     
             const response = await responseJson.json();
-            setUser(response);
-            localStorage.setItem('@Learn:signed', 'true');
-            localStorage.setItem('@Learn:user', JSON.stringify(response));
+            
+            if (!response.message) {
+                setUser(response);
+                setSigned(true);
+                localStorage.setItem('@Learn:signed', 'true');
+                localStorage.setItem('@Learn:user', JSON.stringify(response));
+            }
 
             return response;
         } catch(error) {
