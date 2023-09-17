@@ -1,0 +1,61 @@
+.card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--learn-secondary-dark);
+    background-color: var(--learn-background);
+    margin: 1.2rem 0;
+}
+
+.card .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .info-area h3 {
+    color: var(--learn-white);
+    font-size: 1.4rem;
+    margin-bottom: .4rem;
+}
+
+.card .info-area p {
+    color: rgba(255, 255, 255, .49);
+}
+
+.card .actions {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .85rem;
+}
+
+.card .actions .info {
+    color: rgba(255, 255, 255, .49);
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card .actions .info:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.card .actions .start {
+    color: var(--learn-primary);
+    margin-left: .2rem;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.card .description {
+    color: var(--learn-white);
+    font-size: .85rem;
+    line-height: 1.6;
+    padding-top: 1rem;
+}
+
+.collapsed {
+    height: 0;
+    overflow-y: hidden;
+}
