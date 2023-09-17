@@ -38,11 +38,11 @@ export default function CreateUserForm() {
                     // .then((response) => response.json())
                 const response = await responseJson.json();
                 console.log('response: ', response);
-                if (!response.mesage) {
+                if (!response.message) {
                     toast.success('Cadastro realizado com sucesso!');
                     hideModal('createUser');
                 } else {
-                    toast.error(response.mesage);
+                    toast.error(response.message);
                 }
             } catch(error) {
                 console.error('Error:', error);
