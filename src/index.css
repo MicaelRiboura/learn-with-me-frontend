@@ -74,3 +74,17 @@ body {
 .form-input::placeholder {
   color: rgba(255, 255, 255, .49);
 }
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  color: var(--learn-white);
+  line-height: 2;
+}
+
+.form-button-area {
+  display: flex;
+  justify-content: flex-end;
+}
