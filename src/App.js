@@ -8,13 +8,15 @@ import CreateUserForm from './components/CreateUserForm';
 import LoginUserForm from './components/LoginUserForm';
 import { LearnAuthProvider } from './contexts/AuthContextApiHook';
 import { LearnModalProvider } from './contexts/ModalContextApiHook';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
       <LearnAuthProvider>
           <LearnModalProvider>
+            <ToastContainer />
             <Modal id="createUser" title="Increva-se">
               <CreateUserForm />
             </Modal>
