@@ -1,0 +1,42 @@
+.banner-container {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(0.4deg, #05061C 0.37%, rgba(0, 0, 0, 0.39) 105.06%);
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .video {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 118vh;
+    z-index: -2;
+    transform: translateY(-30%);
+    border: 1px solid green;
+}
+
+.hero-area {
+    display: flex;
+    align-items: center;
+    height: 40vh;
+}
+
+.hero-title {
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+}
+
+.hero-title span {
+    color: var(--learn-primary);
+}
+
+@media(max-width: 480px) {
+    .video {
+        position: fixed;
+        transform: scale(4);
+        height: 40vh;
+        z-index: -2;
+    }
+}
