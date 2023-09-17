@@ -1,5 +1,6 @@
 .content-area {
-    min-height: 70vh;
+    min-height: 100vh;
+    height: 100%;
     background-color: var(--learn-background);
 }
 
