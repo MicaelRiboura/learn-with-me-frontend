@@ -6,20 +6,26 @@ import Content from './components/template/Content';
 import Modal from './components/template/Modal';
 import CreateUserForm from './components/CreateUserForm';
 import LoginUserForm from './components/LoginUserForm';
+import { LearnAuthProvider } from './contexts/AuthContextApiHook';
+import { LearnModalProvider } from './contexts/ModalContextApiHook';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Modal title="Increva-se">
-        <CreateUserForm />
-      </Modal> */}
-      {/* <Modal title="Entrar">
-        <LoginUserForm />
-      </Modal> */}
-        <Header />
-        <Banner />
-        <Content />
+      <LearnAuthProvider>
+          <LearnModalProvider>
+            <Modal id="createUser" title="Increva-se">
+              <CreateUserForm />
+            </Modal>
+            <Modal id="loginUser" title="Entrar">
+              <LoginUserForm />
+            </Modal>
+            <Header />
+            <Banner />
+            <Content />
+          </LearnModalProvider>
+      </LearnAuthProvider>
     </div>
   );
 }
