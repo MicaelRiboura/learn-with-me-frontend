@@ -1,0 +1,31 @@
+.content-area {
+    min-height: 70vh;
+    background-color: var(--learn-background);
+}
+
+.content-area .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.content-area .actions .group-btns {
+    display: flex;
+    align-items: center;
+}
+
+.content-area .actions .my-trails-action {
+    color: rgba(255, 255, 255, .49);
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.content-area .actions .my-trails-action:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.search-input {
+    max-width: 400px;
+}
