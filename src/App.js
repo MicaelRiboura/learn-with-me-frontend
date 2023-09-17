@@ -10,22 +10,25 @@ import { LearnAuthProvider } from './contexts/AuthContextApiHook';
 import { LearnModalProvider } from './contexts/ModalContextApiHook';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { LearnPagesProvider } from './contexts/PagesContextApiHook';
 
 function App() {
   return (
     <div className="App">
       <LearnAuthProvider>
           <LearnModalProvider>
-            <ToastContainer />
-            <Modal id="createUser" title="Increva-se">
-              <CreateUserForm />
-            </Modal>
-            <Modal id="loginUser" title="Entrar">
-              <LoginUserForm />
-            </Modal>
-            <Header />
-            <Banner />
-            <Content />
+            <LearnPagesProvider>
+              <ToastContainer />
+              <Modal id="createUser" title="Increva-se">
+                <CreateUserForm />
+              </Modal>
+              <Modal id="loginUser" title="Entrar">
+                <LoginUserForm />
+              </Modal>
+              <Header />
+              <Banner />
+              <Content />
+            </LearnPagesProvider>
           </LearnModalProvider>
       </LearnAuthProvider>
     </div>
