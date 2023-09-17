@@ -1,17 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
   --learn-primary: #FF526D;
+  --learn-primary-hover: #922e3d;
   --learn-secondary: #636384;
   --learn-secondary-dark: #1E1E42;
   --learn-background: #11102F;
   --learn-background-dark: #0B0B27;
   --learn-white: #FFFFFF;
+}
+
+
+/* Buttons */
+.learn-btn {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: .3s;
+  min-width: 100px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.learn-btn-primary {
+  background-color: var(--learn-primary);
+  border: 1px solid var(--learn-primary);
+  color: var(--learn-white);
+}
+
+.learn-btn-primary:hover {
+  background-color: var(--learn-primary-hover);
+  border: 1px solid var(--learn-primary-hover);
+}
+
+.learn-btn-primary-outline {
+  background-color: transparent;
+  border: 1px solid var(--learn-primary);
+  color: var(--learn-primary);
+}
+
+.learn-btn-primary-outline:hover {
+  background-color: var(--learn-primary);
+  color: var(--learn-white);
+}
+
+/* Inputs */
+
+.form-input {
+  padding: 10px;
+  border: 1px solid var(--learn-secondary-dark);
+  background-color: var(--learn-secondary-dark);
+  border-radius: 6px;
+  outline: none;
+  color: var(--learn-white);
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, .49);
 }
