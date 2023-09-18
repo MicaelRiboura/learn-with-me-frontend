@@ -7,6 +7,7 @@ import './styles.css';
 import { useLearnPages } from '../../../contexts/PagesContextApiHook';
 import StudyTrailDetails from '../../StudyTrailDetails';
 import MyStudyTrails from '../../MyStudyTrails';
+import CreateStudyTrailForm from '../../CreateStudyTrailForm';
 
 export default function Content() {
     const { currentPage, changePage } = useLearnPages();
@@ -36,12 +37,13 @@ export default function Content() {
                     <div className="group-btns">
                         {currentPage === 'ListStudyTrails' && <span className="my-trails-action" onClick={() => changePage('MyStudyTrails')}>Minhas Trilhas</span>}
                         {(currentPage === 'MyStudyTrails' || currentPage === 'StudyTrailDetails') && <span className="my-trails-action" onClick={() => changePage('ListStudyTrails')}>Todas as Trilhas</span>}
-                        <button className="learn-btn learn-btn-primary">Criar nova trilha</button>
+                        <button className="learn-btn learn-btn-primary" onClick={() => changePage('CreateStudyTrail')}>Criar nova trilha</button>
                     </div>
                 </div>
                 {currentPage === 'ListStudyTrails' && <ListStudyTrails studyTrails={studyTrails}  />}
                 {currentPage === 'MyStudyTrails' && <MyStudyTrails />}
                 {currentPage === 'StudyTrailDetails' && <StudyTrailDetails />}
+                {currentPage === 'CreateStudyTrail' && <CreateStudyTrailForm />}
             </BaseContainer>
         </div>
     );
