@@ -1,0 +1,8 @@
+.form-study-trail {
+    padding-top: 2rem;
+}
+
+.form-study-trail h1 {
+    color: var(--learn-white);
+    margin-bottom: 1.5rem;
+}
