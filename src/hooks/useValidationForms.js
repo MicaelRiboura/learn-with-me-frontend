@@ -23,8 +23,19 @@ export const useValidationForms = () => {
         return validationErrors;
     }
 
+    const validateResourceField = (field) => {
+        let validationErrors = 0;
+        if (!field.includes('https://')) {
+            toast.error('O campo recurso precisa ser um link válido!');
+            validationErrors++;
+        }
+
+        return validationErrors;
+    }
+
     return {
         validateRequiredFields,
         validateEmailField,
+        validateResourceField,
     } 
 }
