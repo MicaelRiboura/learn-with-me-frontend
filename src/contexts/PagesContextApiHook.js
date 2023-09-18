@@ -1,14 +1,22 @@
 import { createContext, useContext, useState } from "react";
+import { useLearnAuth } from "./AuthContextApiHook";
+import { useLearnModal } from "./ModalContextApiHook";
 
 const LearnPagesContext = createContext({});
 
 const LearnPagesProvider = ({ children }) => {
+    const { signed } = useLearnAuth();
+    const { showModal } = useLearnModal();
     const [currentPage, setCurrentPage] = useState('ListStudyTrails');
     const [data, setData] = useState({});
 
     const changePage = (page, data={}) => {
-        setCurrentPage(page);
-        setData(data);
+        if (signed) {
+            setCurrentPage(page);
+            setData(data);
+        } else {
+            showModal('loginUser');
+        }
     }
 
     return <LearnPagesContext.Provider value={{
