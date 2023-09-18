@@ -1,0 +1,14 @@
+.form-item {
+    padding-top: 2rem;
+}
+
+.form-item h1 {
+    color: var(--learn-white);
+    margin-bottom: 1.5rem;
+}
+
+.form-item > p {
+    color: rgba(255, 255, 255, .49);
+    font-size: 1rem;
+    margin-top: .7rem;
+}
