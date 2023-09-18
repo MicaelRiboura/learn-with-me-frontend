@@ -23,7 +23,7 @@ export default function MyStudyTrails() {
     }, [user]);
 
     return (
-        <div className="list-study-trails">
+        <div className="my-study-trails">
             <h1>Minhas Trilhas</h1>
             {studyTrails?.map((studyTrail) => (
                 <>

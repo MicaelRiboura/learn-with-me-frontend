@@ -1,3 +1,13 @@
+.my-study-trails {
+    height: max-content;
+    padding-bottom: 1rem;
+}
+
+.my-study-trails h1 {
+    color: var(--learn-white);
+    margin-top: 1.3rem;
+}
+
 .ident-area {
     padding-left: 1.5rem;
 }
