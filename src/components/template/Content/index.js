@@ -8,6 +8,7 @@ import { useLearnPages } from '../../../contexts/PagesContextApiHook';
 import StudyTrailDetails from '../../StudyTrailDetails';
 import MyStudyTrails from '../../MyStudyTrails';
 import CreateStudyTrailForm from '../../CreateStudyTrailForm';
+import CreateItemForm from '../../CreateItemForm';
 
 export default function Content() {
     const { currentPage, changePage } = useLearnPages();
@@ -33,10 +34,11 @@ export default function Content() {
         <div className="content-area">
             <BaseContainer>
                 <div className="actions">
-                    <input className="form-input search-input" type="text" placeholder="Pesquisar por trilha..." onChange={(e) => setSearchTitle(e.target.value)} />
+                    {currentPage === 'ListStudyTrails' && <input className="form-input search-input" type="text" placeholder="Pesquisar por trilha..." onChange={(e) => setSearchTitle(e.target.value)} />}
+                    {currentPage !== 'ListStudyTrails' && <span></span>}
                     <div className="group-btns">
                         {currentPage === 'ListStudyTrails' && <span className="my-trails-action" onClick={() => changePage('MyStudyTrails')}>Minhas Trilhas</span>}
-                        {(currentPage === 'MyStudyTrails' || currentPage === 'StudyTrailDetails') && <span className="my-trails-action" onClick={() => changePage('ListStudyTrails')}>Todas as Trilhas</span>}
+                        {currentPage !== 'ListStudyTrails' && <span className="my-trails-action" onClick={() => changePage('ListStudyTrails')}>Todas as Trilhas</span>}
                         <button className="learn-btn learn-btn-primary" onClick={() => changePage('CreateStudyTrail')}>Criar nova trilha</button>
                     </div>
                 </div>
@@ -44,6 +46,7 @@ export default function Content() {
                 {currentPage === 'MyStudyTrails' && <MyStudyTrails />}
                 {currentPage === 'StudyTrailDetails' && <StudyTrailDetails />}
                 {currentPage === 'CreateStudyTrail' && <CreateStudyTrailForm />}
+                {currentPage === 'CreateItem' && <CreateItemForm />}
             </BaseContainer>
         </div>
     );
