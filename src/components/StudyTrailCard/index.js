@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './styles.css';
 import { useLearnPages } from '../../contexts/PagesContextApiHook';
+import { FaTrashAlt } from 'react-icons/fa';
 
-export default function StudyTrailCard({ studyTrail, hasAuthor }) {
+export default function StudyTrailCard({ studyTrail, hasAuthor, hasDelete=false }) {
     const { changePage } = useLearnPages();
 
     const [collapsed, setCollapsed] = useState(true);
@@ -19,6 +20,9 @@ export default function StudyTrailCard({ studyTrail, hasAuthor }) {
                 <div className="actions">
                     <span className="info" onClick={() => setCollapsed((state) => !state)}>{collapsed ? 'Mais informações' : 'Menos informações'}</span>
                     <span className="start" onClick={() => changePage('StudyTrailDetails', { studyTrailId: studyTrail.id })}>Comece</span>
+                    {hasDelete && (
+                        <FaTrashAlt className="delete-icon" />
+                    )}
                 </div>
             </div>
             <div 

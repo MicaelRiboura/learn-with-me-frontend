@@ -59,6 +59,13 @@
     padding-top: 1rem;
 }
 
+.study-trail-card .delete-icon {
+    color: var(--learn-white);
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
 .collapsed {
     height: 0;
     overflow-y: hidden;
