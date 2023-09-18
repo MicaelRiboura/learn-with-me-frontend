@@ -4,13 +4,11 @@ import BaseContainer from "../BaseContainer";
 import ListStudyTrails from '../../ListStudyTrails';
 
 import './styles.css';
-import { useLearnAuth } from '../../../contexts/AuthContextApiHook';
 import { useLearnPages } from '../../../contexts/PagesContextApiHook';
 import StudyTrailDetails from '../../StudyTrailDetails';
 import MyStudyTrails from '../../MyStudyTrails';
 
 export default function Content() {
-    const { user } = useLearnAuth();
     const { currentPage, changePage } = useLearnPages();
 
     const [studyTrails, setStudyTrails] = useState([]);
