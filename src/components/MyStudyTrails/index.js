@@ -26,14 +26,14 @@ export default function MyStudyTrails() {
         <div className="my-study-trails">
             <h1>Minhas Trilhas</h1>
             {studyTrails?.map((studyTrail) => (
-                <>
-                    <StudyTrailCard key={`${studyTrail.id}`} studyTrail={studyTrail} hasDelete={true} />
+                <div key={`${studyTrail.id}`}>
+                    <StudyTrailCard studyTrail={studyTrail} hasDelete={true} />
                     <div className="ident-area">
                         {studyTrail.items?.map(item => (
-                            <ItemCard key={item.id} item={item} hasDelete={true} />
+                            <ItemCard key={`${item.id}`} item={item} hasDelete={true} />
                         ))}
                     </div>
-                </>
+                </div>
             ))}
         </div>
     );
