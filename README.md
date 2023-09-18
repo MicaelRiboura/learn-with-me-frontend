@@ -19,7 +19,13 @@ Compartilhe seus estudos e aprenda com outras pessoas.
 
 Projeto desenvolvido para o MVP na Sprint 1 da Pós Graduação de Engenharia de Software da PUC-Rio.
 
-> ⚠️ Para o correto funcionamento dessa aplicação, é necessária sua conexão com a API. Você pode acessar o repositório da API desse projeto, [clicando aqui](https://github.com/MicaelRiboura/learn-with-me-api).
+> ⚠️ Para o correto funcionamento dessa aplicação, é necessária sua conexão com a API. Você pode acessar o repositório da API desse projeto [clicando aqui](https://github.com/MicaelRiboura/learn-with-me-api). Também é necessário ter o Node.js instalado em sua máquina, [clique aqui para fazer o download](https://nodejs.org/pt-br/download).
+
+## Pré-visualização
+
+<p align="center" style="margin: 40px 0">
+    <img src="./doc-images/screenshot.png" height="100%">
+</p>
 
 ## Executando a Aplicação
 
