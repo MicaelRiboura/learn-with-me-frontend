@@ -1,0 +1,9 @@
+.study-trail-details h1 {
+    color: var(--learn-white);
+    margin-top: 1.3rem;
+}
+
+.study-trail-details p {
+    color: rgba(255, 255, 255, .49);
+    margin: .2rem 0;
+}
