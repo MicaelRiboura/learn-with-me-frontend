@@ -7,6 +7,7 @@ import './styles.css';
 import { useLearnAuth } from '../../../contexts/AuthContextApiHook';
 import { useLearnPages } from '../../../contexts/PagesContextApiHook';
 import StudyTrailDetails from '../../StudyTrailDetails';
+import MyStudyTrails from '../../MyStudyTrails';
 
 export default function Content() {
     const { user } = useLearnAuth();
@@ -41,7 +42,7 @@ export default function Content() {
                     </div>
                 </div>
                 {currentPage === 'ListStudyTrails' && <ListStudyTrails studyTrails={studyTrails}  />}
-                {currentPage === 'MyStudyTrails' && <ListStudyTrails title="Minhas Trilhas" hasAuthor={false} studyTrails={user.study_trails} />}
+                {currentPage === 'MyStudyTrails' && <MyStudyTrails />}
                 {currentPage === 'StudyTrailDetails' && <StudyTrailDetails />}
             </BaseContainer>
         </div>
