@@ -84,3 +84,40 @@
     height: 0;
     overflow-y: hidden;
 }
+
+@media(max-width: 767px) {
+    .item-card .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem 0;
+    }
+
+    .item-card .actions .info {
+        margin-bottom: 1rem;
+    }
+
+    .item-card .actions .delete-icon {
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .item-card .info-area .info h3 {
+        color: var(--learn-white);
+        font-size: 1.05rem;
+        margin-bottom: .4rem;
+    }
+
+    .item-card .info-area {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .item-card .info-area .item-icon {
+        margin-bottom: .4rem;
+    }
+}
