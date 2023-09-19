@@ -1,6 +1,6 @@
 import './styles.css';
 
-import videoBg from '../../assets/bannerVideo.mp4';
+import videoBg from '../../../assets/bannerVideo.mp4';
 import BaseContainer from '../BaseContainer';
 
 export default function Banner() {

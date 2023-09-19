@@ -21,6 +21,7 @@ export default function StudyTrailCard({ studyTrail, hasAuthor, hasDelete=false 
                 if (data.message.includes('sucesso')) {
                     toast.success('Trilha de estudo removida com sucesso!');
                     setHasDeleted(true);
+                    changePage('MyStudyTrails', { deletedStudyTrailId: id });
                 } else {
                     toast.error(data.message);
                 }

@@ -1,7 +1,7 @@
 import BaseContainer from '../BaseContainer';
 import './styles.css';
 
-import Logo from '../../assets/logo.svg';
+import Logo from '../../../assets/logo.svg';
 import { useLearnModal } from '../../../contexts/ModalContextApiHook';
 import { useLearnAuth } from '../../../contexts/AuthContextApiHook';
 import { FaUserCircle } from 'react-icons/fa';

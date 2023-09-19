@@ -30,7 +30,7 @@ export default function MyStudyTrails() {
                     <StudyTrailCard studyTrail={studyTrail} hasDelete={true} />
                     <div className="ident-area">
                         {studyTrail.items?.map(item => (
-                            <ItemCard key={`${item.id}`} item={item} hasDelete={true} />
+                            <ItemCard key={`${item.id}`} studyTrailId={studyTrail.id} item={item} hasDelete={true} />
                         ))}
                     </div>
                 </div>

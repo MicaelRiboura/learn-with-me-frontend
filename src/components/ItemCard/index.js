@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiFillPlayCircle, AiFillFileText } from 'react-icons/ai';
 import { FaTrashAlt } from 'react-icons/fa';
 import './styles.css';
 import { toast } from 'react-toastify';
+import { useLearnPages } from '../../contexts/PagesContextApiHook';
 
-export default function ItemCard({ item, hasDelete=false }) {
+export default function ItemCard({ item, studyTrailId, hasDelete=false }) {
+    const { currentPage, data } = useLearnPages();
     const [collapsed, setCollapsed] = useState(true);
 
     const [hasDeleted, setHasDeleted] = useState(false);
+
+    useEffect(() => {
+        if (currentPage === 'MyStudyTrails' && data?.deletedStudyTrailId === studyTrailId) {
+            setHasDeleted(true);
+        }
+    }, [data, currentPage, studyTrailId, hasDeleted]);
 
     const itemTypesDict = {
         'text': 'Texto',
